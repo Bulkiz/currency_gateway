@@ -12,11 +12,11 @@ import org.springframework.web.context.request.WebRequest;
 @RestControllerAdvice
 public class AppExceptionHandler {
 
-//    @ExceptionHandler(Exception.class) //catching all other exceptions, so we don't expose the stacktrace
-//    public ResponseEntity<String> handleInternalServerError(Exception e) {
-//        System.out.println(e.getMessage()); // simulating log
-//        return ResponseEntity.internalServerError().body("There was a problem with the server");
-//    }
+    @ExceptionHandler(Exception.class) //catching all other exceptions, so we don't expose the stacktrace
+    public ResponseEntity<String> handleInternalServerError(Exception e) {
+        System.out.println(e.getMessage()); // simulating log
+        return ResponseEntity.internalServerError().body("There was a problem with the server");
+    }
 
     @ExceptionHandler(DuplicateRequestException.class)
     public ResponseEntity<?> handleDuplicateRequest(DuplicateRequestException e, WebRequest request) {
