@@ -13,7 +13,7 @@ public class RequestLog {
 
     private String serviceName;
 
-    private LocalDateTime requestTime;
+    private LocalDateTime requestTimestamp;
 
     private String clientId;
 
@@ -33,12 +33,12 @@ public class RequestLog {
         this.serviceName = serviceName;
     }
 
-    public LocalDateTime getRequestTime() {
-        return requestTime;
+    public LocalDateTime getRequestTimestamp() {
+        return requestTimestamp;
     }
 
-    public void setRequestTime(LocalDateTime requestTime) {
-        this.requestTime = requestTime;
+    public void setRequestTimestamp(LocalDateTime requestTime) {
+        this.requestTimestamp = requestTime;
     }
 
     public String getClientId() {

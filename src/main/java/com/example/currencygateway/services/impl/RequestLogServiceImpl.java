@@ -25,7 +25,7 @@ public class RequestLogServiceImpl implements RequestLogService {
         requestLog.setRequestId(requestId);
         requestLog.setServiceName(serviceName.getValue());
         requestLog.setClientId(clientId);
-        requestLog.setRequestTime(LocalDateTime.now());
+        requestLog.setRequestTimestamp(LocalDateTime.now());
         requestLogRepository.save(requestLog);
     }
 
